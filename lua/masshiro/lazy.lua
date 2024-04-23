@@ -63,7 +63,7 @@ require("lazy").setup({
 		dependencies = {
 			{
 				"L3MON4D3/LuaSnip",
-				dependencies = { "rafamadriz/friendly-snippets" },
+				dependencies = { "rafamadriz/friendly-snippets", "saadparwaiz1/cmp_luasnip" },
 				config = function()
 					require("luasnip.loaders.from_vscode").lazy_load()
 				end,
@@ -115,7 +115,6 @@ require("lazy").setup({
 
 	"lewis6991/gitsigns.nvim",
 	"rmagatti/auto-session",
-	"saadparwaiz1/cmp_luasnip",
 
 	"mfussenegger/nvim-lint",
 
