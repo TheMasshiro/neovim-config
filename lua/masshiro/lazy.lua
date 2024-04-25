@@ -87,6 +87,7 @@ require("lazy").setup({
 	{
 		"stevearc/conform.nvim",
 		opts = {},
+		event = { "BufReadPre", "BufNewFile" },
 	},
 
 	{
@@ -112,11 +113,16 @@ require("lazy").setup({
 			-- refer to the configuration section below
 		},
 	},
+	{
+		"mfussenegger/nvim-lint",
+		event = {
+			"BufReadPre",
+			"BufNewFile",
+		},
+	},
 
 	"lewis6991/gitsigns.nvim",
 	"rmagatti/auto-session",
-
-	"mfussenegger/nvim-lint",
 
 	"ThePrimeagen/vim-be-good",
 

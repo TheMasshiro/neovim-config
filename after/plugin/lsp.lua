@@ -28,6 +28,7 @@ require("mason-lspconfig").setup({
 ---
 local cmp = require("cmp")
 local cmp_action = lsp_zero.cmp_action()
+local cmp_format = require("lsp-zero").cmp_format({ details = true })
 
 cmp.setup({
 	snippet = {
@@ -49,11 +50,16 @@ cmp.setup({
 		-- Scroll up and down in the completion documentation
 		["<C-u>"] = cmp.mapping.scroll_docs(-4),
 		["<C-d>"] = cmp.mapping.scroll_docs(4),
+
+		-- Navigate between completion
+		["<Tab>"] = cmp_action.luasnip_supertab(),
+		["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
 	}),
 	sources = cmp.config.sources({
-		-- { name = "nvim_lsp" },
+		{ name = "nvim_lsp" },
 		{ name = "luasnip" }, -- For luasnip users.
 	}, {
 		{ name = "buffer" },
 	}),
+	formatting = cmp_format,
 })
