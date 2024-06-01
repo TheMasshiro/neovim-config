@@ -7,6 +7,7 @@ require("conform").setup({
 		cpp = { "clang-format" },
 		-- Use a sub-list to run only the first available formatter
 		javascript = { { "prettierd", "prettier" } },
+		markdown = { "prettierd", "prettier" },
 	},
 
 	format_on_save = {

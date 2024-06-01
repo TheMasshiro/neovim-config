@@ -52,8 +52,8 @@ cmp.setup({
 		["<C-d>"] = cmp.mapping.scroll_docs(4),
 
 		-- Navigate between completion
-		["<Tab>"] = cmp_action.luasnip_supertab(),
-		["<S-Tab>"] = cmp_action.luasnip_shift_supertab(),
+		["<A-j>"] = cmp_action.tab_complete(),
+		["<A-k>"] = cmp_action.select_prev_or_fallback(),
 	}),
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
@@ -62,4 +62,18 @@ cmp.setup({
 		{ name = "buffer" },
 	}),
 	formatting = cmp_format,
+})
+
+---
+-- Fix C/CPP LSP offset encoding
+---
+local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+require("lspconfig").clangd.setup({
+	on_attach = on_attach,
+	capabilities = cmp_nvim_lsp.default_capabilities(),
+	cmd = {
+		"clangd",
+		"--offset-encoding=utf-16",
+	},
 })
