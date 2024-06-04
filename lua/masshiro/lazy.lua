@@ -77,11 +77,12 @@ require("lazy").setup({
 	},
 
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-		-- use opts = {} for passing setup options
-		-- this is equalent to setup({}) function
+		"altermo/ultimate-autopair.nvim",
+		event = { "InsertEnter", "CmdlineEnter" },
+		branch = "v0.6", --recommended as each new version will have breaking changes
+		opts = {
+			--Config goes here
+		},
 	},
 
 	{
@@ -114,7 +115,7 @@ require("lazy").setup({
 	"lewis6991/gitsigns.nvim",
 	"rmagatti/auto-session",
 	"RRethy/vim-illuminate",
-	"github/copilot.vim",
+	-- "github/copilot.vim",
 
 	"ThePrimeagen/vim-be-good",
 
