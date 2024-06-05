@@ -19,7 +19,7 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- add catpuccin mocha
+	-- add catpuccin colorscheme
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
