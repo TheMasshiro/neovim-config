@@ -10,10 +10,15 @@ return {
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
-			local lsp = require("lspconfig")
+			local mason_lspconfig = require("mason-lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			lsp.lua_ls.setup({
-				capabilities = capabilities,
+
+			mason_lspconfig.setup_handlers({
+				function(server_name)
+					require("lspconfig")[server_name].setup({
+						capabilities = capabilities,
+					})
+				end,
 			})
 
 			vim.api.nvim_create_autocmd("LspAttach", {
