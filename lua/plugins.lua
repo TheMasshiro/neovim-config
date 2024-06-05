@@ -23,7 +23,7 @@ return {
 	},
 
 	"RRethy/vim-illuminate",
-	-- "github/copilot.vim",
+	"github/copilot.vim",
 	"ThePrimeagen/vim-be-good",
 	"eandrju/cellular-automaton.nvim",
 }
