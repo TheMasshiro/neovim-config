@@ -5,7 +5,7 @@ return {
 		dependencies = {
 			{ "williamboman/mason.nvim", opts = {} },
 			{ "williamboman/mason-lspconfig.nvim", opts = {
-				automatic_install = true,
+				automatic_installation = true,
 			} },
 			"hrsh7th/cmp-nvim-lsp",
 		},
