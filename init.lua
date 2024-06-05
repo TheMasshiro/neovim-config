@@ -15,8 +15,8 @@ vim.g.mapleader = " "
 
 require("lazy").setup("plugins")
 
-require("masshiro.remap")
-require("masshiro.set")
-require("masshiro.yank")
+require("core.remap")
+require("core.set")
+require("core.yank")
 
 vim.g.python3_host_prog = "C:\\Users\\Masshiro\\scoop\\shims\\python3.exe"
