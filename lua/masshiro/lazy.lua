@@ -19,12 +19,11 @@ require("lazy").setup({
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
 
-	-- add dracula
+	-- add catpuccin mocha
 	{
-		"Mofiqul/dracula.nvim",
-		opts = {
-			colorscheme = "dracula",
-		},
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
 	},
 
 	{
