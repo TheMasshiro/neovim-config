@@ -25,5 +25,5 @@ return {
 	"RRethy/vim-illuminate",
 	"ThePrimeagen/vim-be-good",
 	"eandrju/cellular-automaton.nvim",
-	-- "github/copilot.vim",
+	"github/copilot.vim",
 }
