@@ -13,7 +13,11 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
-require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+	ui = {
+		border = "rounded",
+	},
+})
 
 require("core.remap")
 require("core.set")

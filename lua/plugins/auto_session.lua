@@ -24,6 +24,7 @@ return {
 		-- ⚠️ This will only work if Telescope.nvim is installed
 		vim.keymap.set("n", "<leader>ls", require("auto-session.session-lens").search_session, {
 			noremap = true,
+			desc = "Find Session",
 		})
 	end,
 }

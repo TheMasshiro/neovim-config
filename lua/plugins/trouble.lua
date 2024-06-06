@@ -8,6 +8,11 @@ return {
 	},
 
 	config = function()
-		vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", { silent = true, noremap = true })
+		vim.keymap.set(
+			"n",
+			"<leader>xq",
+			"<cmd>TroubleToggle quickfix<cr>",
+			{ silent = true, noremap = true, desc = "Trouble Quickfix" }
+		)
 	end,
 }
