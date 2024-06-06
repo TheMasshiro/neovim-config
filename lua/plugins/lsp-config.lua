@@ -3,18 +3,15 @@ return {
 		"neovim/nvim-lspconfig",
 		event = { "BufReadPost", "BufNewFile" },
 		dependencies = {
-			{ "williamboman/mason.nvim", opts = {} },
+			{ "williamboman/mason.nvim", opts = { ui = {
+				border = "rounded",
+			} } },
 			{ "williamboman/mason-lspconfig.nvim", opts = {
 				automatic_installation = true,
 			} },
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
-			require("mason").setup({
-				ui = {
-					border = "rounded",
-				},
-			})
 			local mason_lspconfig = require("mason-lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
