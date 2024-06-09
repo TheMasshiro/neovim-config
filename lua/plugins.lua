@@ -10,5 +10,4 @@ return {
 
 	"RRethy/vim-illuminate",
 	"ThePrimeagen/vim-be-good",
-	"eandrju/cellular-automaton.nvim",
 }

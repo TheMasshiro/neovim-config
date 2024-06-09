@@ -34,8 +34,6 @@ vim.keymap.set(
 	{ desc = "Rename all variables in buffer" }
 )
 
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", { desc = "Make it rain" })
-
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
 end, { desc = "Source File" })
