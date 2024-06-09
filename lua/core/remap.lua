@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank line to system clipboar
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]], { desc = "Delete without yanking" })
 
--- This is going to get me cancelled -ThePrimeagen
+-- This is going to get me cancelled : ThePrimeagen
 vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Exit insert mode" })
 
 vim.keymap.set("n", "Q", "<nop>", { desc = "No operation" })
@@ -31,7 +31,7 @@ vim.keymap.set(
 	"n",
 	"<leader>s",
 	[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-	{ desc = "Rename all variables" }
+	{ desc = "Rename all variables in buffer" }
 )
 
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", { desc = "Make it rain" })
