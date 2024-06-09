@@ -3,7 +3,7 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		local colors = {
-			dark = "#191A21",
+			dark = "#181825",
 			light = "#ABB2BF",
 		}
 
