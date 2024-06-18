@@ -4,7 +4,7 @@ return {
 	config = function()
 		local colors = {
 			dark = "#181825",
-			light = "#ABB2BF",
+			light = "#cdd6f4",
 		}
 
 		local custom = {
@@ -43,8 +43,8 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch", "diff", "diagnostics" },
-				lualine_c = { "filename" },
+				lualine_b = { "filename" },
+				lualine_c = { "branch", "diff", "diagnostics" },
 				lualine_x = { "encoding", "fileformat", "filetype" },
 				lualine_y = { "progress" },
 				lualine_z = { "location" },
