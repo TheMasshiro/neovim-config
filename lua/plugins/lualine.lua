@@ -2,6 +2,8 @@ return {
 	"nvim-lualine/lualine.nvim",
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
+		local lualine = require("lualine")
+
 		local colors = {
 			dark = "#181825",
 			light = "#cdd6f4",
@@ -19,8 +21,6 @@ return {
 			command = { a = { fg = colors.light, bg = colors.dark } },
 			inactive = { a = { fg = colors.light, bg = colors.dark } },
 		}
-
-		local lualine = require("lualine")
 
 		lualine.setup({
 			options = {
