@@ -9,9 +9,12 @@ return {
 			{ "williamboman/mason-lspconfig.nvim", opts = {
 				automatic_installation = true,
 			} },
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			"hrsh7th/cmp-nvim-lsp",
 		},
 		config = function()
+			local mason_tool_installer = require("mason-tool-installer")
+
 			local mason_lspconfig = require("mason-lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -59,6 +62,40 @@ return {
 						{ buffer = event.buf, desc = "Go to Declaration" }
 					)
 				end,
+			})
+
+			mason_lspconfig.setup({
+				ensure_installed = {
+					-- LSP
+					"clangd",
+					"pyright",
+					"tsserver",
+					"html",
+					"cssls",
+					"jsonls",
+					"marksman",
+					"lua_ls",
+					"emmet_language_server",
+					"rust_analyzer",
+				},
+			})
+
+			mason_tool_installer.setup({
+				ensure_installed = {
+					-- Linter
+					"checkstyle",
+					"cpplint",
+					"eslint_d",
+					"flake8",
+					"golangci-lint",
+
+					-- Formatter
+					"black",
+					"clang-format",
+					"prettier",
+					"prettierd",
+					"stylua",
+				},
 			})
 		end,
 	},
