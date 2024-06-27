@@ -17,7 +17,9 @@ return {
 					after = "",
 				},
 			})
-			vim.keymap.set("n", "<leader>pt", ":TodoTelescope<CR>", { desc = "Open Todo-Comments" })
+			vim.keymap.set("n", "<leader>pl", ":TodoLocList<CR>", { desc = "Todo Location List" })
+			vim.keymap.set("n", "<leader>pq", ":TodoQuickFix<CR>", { desc = "Todo Quick Fix" })
+			vim.keymap.set("n", "<leader>pt", ":TodoTrouble<CR>", { desc = "Todo Trouble" })
 		end,
 	},
 	{
