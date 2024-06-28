@@ -25,11 +25,11 @@ return {
 		}
 
 		dashboard.section.buttons.val = {
-			dashboard.button("w", "  󰁯  Restore Session For Current Directory", "<cmd>SessionRestore<CR>"),
-			dashboard.button("f", "  󰱼  Find File", "<cmd>FzfLua files<CR>"),
-			dashboard.button("g", "  󰱼  Git File", "<cmd>FzfLua git_files<CR>"),
-			dashboard.button("s", "    Find Word", "<cmd>FzfLua live_grep<CR>"),
-			dashboard.button("v", "    File Explorer", "<cmd>Oil --float<CR>"),
+			dashboard.button("SPC wr", "  󰁯  Restore Session For Current Directory", "<cmd>SessionRestore<CR>"),
+			dashboard.button("SPC pf", "  󰱼  Find File", "<cmd>FzfLua files<CR>"),
+			dashboard.button("SPC pg", "  󰱼  Git File", "<cmd>FzfLua git_files<CR>"),
+			dashboard.button("SPC ps", "    Find Word", "<cmd>FzfLua live_grep<CR>"),
+			dashboard.button("SPC pv", "    File Explorer", "<cmd>Oil --float<CR>"),
 		}
 
 		alpha.setup(dashboard.opts)
