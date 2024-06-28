@@ -1,5 +1,6 @@
 return {
 	"theprimeagen/refactoring.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		local refactor = require("refactoring")
 		refactor.setup({})
